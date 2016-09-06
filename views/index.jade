@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .grid-container.centered
+      .grid-100
+        .contained
+          .grid-100
+            .heading
+              h1 Flickr Photo Search
+              form
+                label(for='search') Type a search term
+                input#search(type='search', name='search')
+                input#submit(type='submit', value='Search')
+          ul#photos
