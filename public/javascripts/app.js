@@ -34,14 +34,14 @@ $(document).ready(function() {
       var $tubeTest = $('#tubeTest');
       var youtubeAPI = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyCKQfeLQ1KcJox_KtjdLq_WYbbn97KbHPo";
       var youtubeOptions = {
-          p: "dog",
-          maxResults: 25,
+          q: 'cat',
+          maxResults: 30,
       };
       function listStuff(data) {
         var youtubeStuff = '<ul>';
         $.each(data.items,function(i, video) {
           youtubeStuff += '<li>';
-          youtubeStuff += video.snippet;
+          youtubeStuff += video.snippet.title;
           youtubeStuff += '</li>';
         });
         youtubeStuff += '</ul>';
