@@ -14,7 +14,7 @@ $('form').submit(function (e) {
 
       var youtubeOptions = {
           q: search,
-          maxResults: 30,
+          maxResults: 48
       };
 
       function listStuff(data) {
