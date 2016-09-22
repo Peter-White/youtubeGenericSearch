@@ -2,10 +2,17 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title AJAX, jQuery, Javascript Practice
+    title Pointless AJAX Testing
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(href='http://fonts.googleapis.com/css?family=Varela+Round', rel='stylesheet', type='text/css')
     script(src='https://code.jquery.com/jquery-3.1.0.min.js')
     script(src='javascripts/app.js')
+    script(src='javascripts/map.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBznCAWBZw_oCmNZ59dbFtvZwdKN4VizQk&callback=initMap"
+    async defer)
+    style.
+      #map {
+        height: 500px;
+      }
   body
     block content
