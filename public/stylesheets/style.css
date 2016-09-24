@@ -2024,3 +2024,15 @@ footer p {
 input[type=search] {
   font-size: 2em;
 }
+
+/*Map Styles*/
+
+.mapcontainer {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mapcontainer #map {
+    height: 500px;
+}

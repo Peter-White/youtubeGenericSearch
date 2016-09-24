@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+var $selection = $('#selection');
+
 $('form').submit(function (e) {
       e.preventDefault();
       var $searchField = $('#search');
@@ -11,10 +13,12 @@ $('form').submit(function (e) {
       var $tubeTest = $('#tubeTest');
       var youtubeAPI = "https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyCKQfeLQ1KcJox_KtjdLq_WYbbn97KbHPo";
       var search = $searchField.val();
+      var orderChoice = $selection.val();
 
       var youtubeOptions = {
           q: search,
-          maxResults: 48
+          maxResults: 16,
+          order: orderChoice
       };
 
       function listStuff(data) {
