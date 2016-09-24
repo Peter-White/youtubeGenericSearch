@@ -2025,6 +2025,10 @@ input[type=search] {
   font-size: 2em;
 }
 
+#selection {
+  margin-left: 30%;
+}
+
 /*Map Styles*/
 
 .mapcontainer {
