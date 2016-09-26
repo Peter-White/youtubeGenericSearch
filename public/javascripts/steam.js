@@ -13,7 +13,7 @@ $(document).ready(function() {
     // $.each(function(i, game) {
 
     // });
-    htmlStuff += '<li>' + 'Johnny' + '</li>';
+    htmlStuff += '<li>' + 'Tommy' + '</li>';
     htmlStuff += '</ul>';
     $steamContainer.html(htmlStuff);
   };
