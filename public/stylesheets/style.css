@@ -2043,5 +2043,9 @@ input[type=search] {
 
 /*Steam Styles*/
 #steamcontainer {
-  background-color: red;
+  background-color: rgb(27, 40, 56);
+}
+
+#steamcontainer ul li {
+  background-color: rgb(22, 32, 45);
 }
