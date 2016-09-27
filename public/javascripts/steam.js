@@ -16,7 +16,13 @@ $(document).ready(function() {
       $.each(data.response.games, function(i, game) {
         htmlStuff += '<li>';
         htmlStuff += '<img src="http://media.steampowered.com/steamcommunity/public/images/apps/' + game.appid + '/' + game.img_logo_url + '.jpg" />';
-        htmlStuff += '<a href="http://store.steampowered.com/app/' + game.appid + '/">' + game.name + '</a>';
+        htmlStuff += '<a href="http://store.steampowered.com/app/' + game.appid + '/">' + game.name;
+
+          if (game.name === "Undertale") {
+            htmlStuff += ' (I LOOOOOOOVE THIS GAME SO MUCH IT HURTS!!!)';
+          }
+        htmlStuff += '</a>'
+          console.log(game.name);
         htmlStuff += '</li>';
       });
 
