@@ -2,17 +2,26 @@ $(document).ready(function() {
 
   var $steamContainer = $('#steamcontainer');
 
-  var steamAPI = 'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=C2F2065B4A7CC356F0CA94C2A7539FFF';
+  var steamAPI = 'http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=C2F2065B4A7CC356F0CA94C2A7539FFF';
+
   var steamOptions = {
-    steamid: "76561198005298207"
+    steamid: "76561198005298207",
+    format: 'json'
   };
 
+  // var gameCount = data.response.game_count;
+
   function steamGoods(data) {
-    var htmlStuff = '<h2>';
-    var gameCount = data.response.game_count;
-    htmlStuff += gameCount;
-    htmlStuff += '</h2>';
-    $steamContainer.html(htmlStuff);
-  };
-  $.getJSON(steamAPI, steamOptions, steamGoods);
+    var htmlStuff = '<ul id="gamesList">';
+      $.each(data.response.games, function(i, game) {
+        htmlStuff += '<li>';
+        htmlStuff += '<img src="http://media.steampowered.com/steamcommunity/public/images/apps/' + game.appid + '/' + game.img_logo_url + '.jpg" />';
+        htmlStuff += '<a href="http://store.steampowered.com/app/' + game.appid + '/">' + game.name + '</a>';
+        htmlStuff += '</li>';
+      });
+
+        htmlStuff += '</ul>';
+        $steamContainer.html(htmlStuff);
+    };
+    $.getJSON(steamAPI, steamOptions, steamGoods);
 }); //end ready
