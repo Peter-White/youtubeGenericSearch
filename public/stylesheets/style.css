@@ -2046,3 +2046,7 @@ input[type=search] {
   margin-left: 35%;
 }
 
+/*Weather*/
+#weather_report {
+  width: 100%;
+}

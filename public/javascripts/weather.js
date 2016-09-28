@@ -60,12 +60,18 @@ $(document).ready(function() {
   };
 
 
-    var weatherReport = '<img src="';
+    var weatherReport = '<table id="weather_report">';
+    weatherReport += '<tr>';
+    weatherReport += '<th>Weather</th><th>Temperature</th><th>Humidity</th>';
+    weatherReport += '<tr>';
+    weatherReport += '<td><img src="';
     weatherReport += data.current_observation.icon_url;
     weatherReport += '" />';
-    weatherReport += '<h2>' + forecastIcon(icon) + '</h2>';
-    weatherReport += '<h2>' + temp + '</h2>';
-    weatherReport += '<h2>' + humid + '</h2>';
+    weatherReport += '<h2>' + forecastIcon(icon) + '</h2></li>';
+    weatherReport += '<td><h2>' + temp + '</h2></td>';
+    weatherReport += '<td><h2>' + humid + '</h2></td>';
+    weatherReport += '</tr>';
+    weatherReport += '</table>';
     $weathercontainer.html(weatherReport);
   };
   $.getJSON(weatherAPI, forecast);
