@@ -60,7 +60,9 @@ $(document).ready(function() {
   };
 
 
-    var weatherReport = '<table id="weather_report">';
+    var weatherReport = '<h1>Hello, the weather in Boston today is:</h1>';
+    weatherReport += '<br>';
+    weatherReport +='<table id="weather_report">';
     weatherReport += '<tr>';
     weatherReport += '<th>Weather</th><th>Temperature</th><th>Humidity</th>';
     weatherReport += '<tr>';
