@@ -3,7 +3,9 @@ $(document).ready(function() {
   var weatherAPI = "http://api.wunderground.com/api/7c8568ecd192f9f6/conditions/q/MA/Boston.json";
   function forecast(data) {
 
-  function forecastIcon() {
+  var icon = data.current_observation.icon;
+
+  function forecastIcon(weatherIcon) {
     var icons = ["chanceflurries",
       "chancerain",
       "chancesleet",
@@ -47,7 +49,7 @@ $(document).ready(function() {
       "Unknown"];
 
     for(var i = 0; i < icons.length; i++) {
-      if(data.current_observation.icon === icons[i]) {
+      if(weatherIcon === icons[i]) {
         return iconTrans[i];
         break;
       }
@@ -58,7 +60,7 @@ $(document).ready(function() {
     var weatherReport = '<img src="';
     weatherReport += data.current_observation.icon_url;
     weatherReport += '" />';
-    weatherReport += '<h2>' + forecastIcon() + '</h2>';
+    weatherReport += '<h2>' + forecastIcon(icon) + '</h2>';
     $weathercontainer.html(weatherReport);
   };
   $.getJSON(weatherAPI, forecast);
