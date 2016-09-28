@@ -4,7 +4,10 @@ $(document).ready(function() {
   function forecast(data) {
 
   var icon = data.current_observation.icon;
+  var temp = data.current_observation.feelslike_string;
+  var humid = data.current_observation.relative_humidity;
 
+  // Convert Icon names to proper titles
   function forecastIcon(weatherIcon) {
     var icons = ["chanceflurries",
       "chancerain",
@@ -61,6 +64,8 @@ $(document).ready(function() {
     weatherReport += data.current_observation.icon_url;
     weatherReport += '" />';
     weatherReport += '<h2>' + forecastIcon(icon) + '</h2>';
+    weatherReport += '<h2>' + temp + '</h2>';
+    weatherReport += '<h2>' + humid + '</h2>';
     $weathercontainer.html(weatherReport);
   };
   $.getJSON(weatherAPI, forecast);
