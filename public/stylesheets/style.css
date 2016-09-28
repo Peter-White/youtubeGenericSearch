@@ -2041,11 +2041,6 @@ input[type=search] {
     height: 500px;
 }
 
-/*Steam Styles*/
-#steamcontainer {
-  background-color: rgb(27, 40, 56);
-}
+/*Twiiter*/
 
-#steamcontainer ul li {
-  background-color: rgb(22, 32, 45);
-}
+
