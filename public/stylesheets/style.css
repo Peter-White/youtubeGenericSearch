@@ -2042,5 +2042,7 @@ input[type=search] {
 }
 
 /*Twiiter*/
-
+.twitter-timeline {
+  margin-left: 35%;
+}
 
