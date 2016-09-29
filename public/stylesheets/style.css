@@ -2035,6 +2035,13 @@ input[type=search] {
   width: 80%;
   text-align: center;
   margin: 0 auto;
+  background-color: rgb(179, 179, 179);
+  padding: 0.5% 1% 0.5% 1%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .mapcontainer #map {
@@ -2042,8 +2049,20 @@ input[type=search] {
 }
 
 /*Twiiter*/
-.twitter-timeline {
-  margin-left: 35%;
+.twittercontainer {
+  background-color: rgb(179, 179, 179);
+  width: 35%;
+  margin: 0 auto;
+  padding: 1% 1% 1% 1%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.twittercontainer h1 {
+  text-align: center;
 }
 
 /*Weather*/
