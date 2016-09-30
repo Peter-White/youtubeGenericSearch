@@ -36,7 +36,7 @@ $(document).ready(function() {
       "Chance of Snow",
       "Chance of Thunderstorms",
       "Clear",
-      "Cloudy",
+      "Overcast",
       "Flurries",
       "Fog",
       "Haze",
